@@ -131,6 +131,8 @@ export async function getServerSideProps({ req, params }) {
         } : ''
     );
 
+    console.log(filmResponse)
+
     const plot = await markdownToHtml(filmResponse.data[0].attributes.plot)
 
     return {
